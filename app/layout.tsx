@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 import { FlipWords } from "@/components/ui/flip-words";
 import { NavbarDemo } from "./ui/nav";
+import { Hero } from "./ui/hero";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,14 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark dark:bg-black">
       <body className={inter.className + " w-screen"}>
-        <div className=" w-full dark:bg-black"><NavbarDemo/></div>
-        <div className="h-[40rem] flex w-full dark:bg-black justify-center items-center px-4">
-          <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-            Build
-            <FlipWords words={words} /> <br />
-            websites with Aceternity UI
-          </div>
-        </div>
+        <div className=" w-full "> <NavbarDemo/> </div>
+        <Hero/>
         <div>{children}</div></body>
     </html>
   );
